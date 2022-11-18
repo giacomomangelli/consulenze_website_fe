@@ -22,4 +22,12 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['/home']);
     }
 
+  goContact() {
+    this.router.navigate(['/contact']);
+    }
+  goProducts() {
+    this.router.navigate(['/products']);
+    }
+
+
 }

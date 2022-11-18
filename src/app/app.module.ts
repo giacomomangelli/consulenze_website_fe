@@ -7,8 +7,9 @@ import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ProductsComponent } from './pages/products/products.component';
+
 
 
 
@@ -18,8 +19,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     LandingPageComponent,
     HomeComponent,
     NavbarComponent,
-    ServicesComponent,
     ContactComponent,
+    ProductsComponent,
   ],
     imports: [
         BrowserModule,
