@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import {RouterModule} from "@angular/router";
@@ -10,7 +9,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations'
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 
@@ -28,6 +29,9 @@ import { FooterComponent } from './footer/footer.component';
         BrowserModule,
         RouterModule,
         AppRoutingModule,
+        ReactiveFormsModule,
+        NoopAnimationsModule,
+        MatAutocompleteModule
     ],
   providers: [],
   bootstrap: [AppComponent]
