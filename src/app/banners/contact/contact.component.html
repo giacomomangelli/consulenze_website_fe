@@ -1,5 +1,5 @@
-<div class="bg-gray-900 mt-5 py-3">
-<form class=" mt-20  content-center m-5" [formGroup]="contactForm">
+<div class="bg-gray-900 mt-20 py-3">
+<form class=" content-center m-5" [formGroup]="contactForm">
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
@@ -22,19 +22,16 @@
     </div>
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full px-3">
-        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
           E-mail
         </label>
-        <input 
+        <input
             formControlName="email"
-            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
-            id="email" 
-            type="email" 
-            matAutocompleteOrigin #origin="matAutocompleteOrigin"
-            matInput
+            class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            id="email"
+            type="email"
             formControlName="email"
-            [matAutocomplete]="auto"
-            [matAutocompleteConnectedTo]="origin">
+        >
         <ng-container *ngIf="this.contactForm.get('email')?.errors && (this.contactForm.get('email')?.dirty || this.contactForm.get('email')?.touched) ">
           <div *ngIf="this.contactForm.get('email')?.errors?.['required']">
             <small class="text-red-500" >La mail è obbligatoria</small>
@@ -43,9 +40,7 @@
             <small class="text-red-500" >La email deve essere come da essempio</small>
           </div>
         </ng-container>
-        <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
-        </mat-autocomplete>
+
         <!-- <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
           E-mail
         </label>
@@ -67,9 +62,9 @@
           Message
         </label>
         <textarea formControlName="message" class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
-        
+
         <ng-container *ngIf="message?.errors && message?.errors?.['required']"></ng-container>
-       
+
         <ng-container *ngIf="message?.errors && (message?.dirty || message?.touched)">
           <small class="text-red-500" *ngIf="message?.errors?.['minlength']">Il messagio non ha i {{ message?.errors?.['minlength']['requiredLength'] }} caratteri richiesti. (Caratteri inseriti {{message?.errors?.['minlength']['actualLength']}})</small>
         </ng-container>

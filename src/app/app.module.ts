@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './banners/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { ProductsComponent } from './pages/products/products.component';
-import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './banners/contact/contact.component';
+import { ProductsComponent } from './banners/products/products.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations'
-import {MatLegacyAutocompleteModule as MatAutocompleteModule} from '@angular/material/legacy-autocomplete';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { TeamComponent } from './banners/team/team.component';
+import { TechnologiesComponent } from './banners/technologies/technologies.component'
 
 
 
@@ -24,6 +25,8 @@ import {MatLegacyAutocompleteModule as MatAutocompleteModule} from '@angular/mat
     ContactComponent,
     ProductsComponent,
     FooterComponent,
+    TeamComponent,
+    TechnologiesComponent,
   ],
     imports: [
         BrowserModule,
@@ -31,7 +34,7 @@ import {MatLegacyAutocompleteModule as MatAutocompleteModule} from '@angular/mat
         AppRoutingModule,
         ReactiveFormsModule,
         NoopAnimationsModule,
-        MatAutocompleteModule
+
     ],
   providers: [],
   bootstrap: [AppComponent]
