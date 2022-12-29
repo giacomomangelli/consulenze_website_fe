@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,15 +8,15 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  contactForm: FormGroup;
+  contactForm: UntypedFormGroup;
   options: string[] = [];
 
   constructor() {
-    this.contactForm = new FormGroup({
-      firstName: new FormControl("", [Validators.required]),
-      lastName: new FormControl("",[Validators.required]),
-      email: new FormControl("", [Validators.required, Validators.email]),
-      message: new FormControl("", [Validators.minLength(16)])
+    this.contactForm = new UntypedFormGroup({
+      firstName: new UntypedFormControl("", [Validators.required]),
+      lastName: new UntypedFormControl("",[Validators.required]),
+      email: new UntypedFormControl("", [Validators.required, Validators.email]),
+      message: new UntypedFormControl("", [Validators.minLength(16)])
     });
 
     this.contactForm.get('email')?.valueChanges.subscribe((value: string) => {
